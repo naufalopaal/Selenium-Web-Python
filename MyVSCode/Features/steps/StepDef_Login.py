@@ -28,7 +28,7 @@ def step_impl_User_input_password(context, password):
 
 @when(u'User click Masuk button')
 def step_impl(context):
-    driver.find_element(By.XPATH,'//*[@id="root"]/div/div/div[2]/form/button').click()
+    context.browser.find_element(By.XPATH,'//*[@id="root"]/div/div/div[2]/form/button').click()
 
 
 @then(u'User successfully login')
