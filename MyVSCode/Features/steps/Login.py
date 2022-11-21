@@ -9,13 +9,13 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.maximize_window()
 driver.get("https://secondhand-store.herokuapp.com/login")
 time.sleep(1)
-#driver.find_element(By.XPATH,"//*[@id='details-button']").click()
+# driver.find_element(By.XPATH,"//*[@id='details-button']").click()
 
 #login
 username = "binarqae1@gmail.com"
 password = "students1234"
 driver.find_element(By.XPATH,'//*[@id="exampleInputEmail1"]').send_keys(username)
-time.sleep(3)
+time.sleep(2)
 driver.find_element(By.XPATH,'//*[@id="exampleInputPassword1 "]').send_keys(password)
+time.sleep(2)
 driver.find_element(By.XPATH,'//*[@id="root"]/div/div/div[2]/form/button').click()
-time.sleep(4)
