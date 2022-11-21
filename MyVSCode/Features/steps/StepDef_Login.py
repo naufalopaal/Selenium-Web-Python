@@ -1,4 +1,9 @@
 from behave import *
+import time
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 @given(u'User go to secondhand website')
 def step_impl(context):   
