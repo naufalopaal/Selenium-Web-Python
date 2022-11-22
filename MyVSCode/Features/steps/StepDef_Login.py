@@ -4,18 +4,17 @@ from behave import *
 # dependency
 import time
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
+# to remove attached error
+options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-# instance of chrome driver
-# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-
+# TEST CASE  
 @given(u'User go to secondhand website')
 def step_impl(context):   
-    context.browser = webdriver.Chrome() #use chrome driver
+    context.browser = webdriver.Chrome(options=options) #use chrome driver
     context.browser.get("https://secondhand-store.herokuapp.com/login")
     
 
