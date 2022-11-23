@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import time
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver = driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window()
 driver.get("https://secondhand-store.herokuapp.com/login")
 time.sleep(1)
